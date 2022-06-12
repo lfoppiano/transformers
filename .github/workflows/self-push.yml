@@ -1,4 +1,4 @@
-name: Self-hosted runner (push)
+name: 🤖 Self-hosted runner (push)
 
 on:
   push:
