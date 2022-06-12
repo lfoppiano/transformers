@@ -3,7 +3,7 @@ name: Self-hosted runner (push-caller)
 on:
   push:
     branches:
-      - main
+      - test_fix_commit_history_status_list
     paths:
       - "src/**"
       - "tests/**"
@@ -25,5 +25,6 @@ jobs:
       - name: Checkout to branch push-ci
         # A more strict way to make sure`push-ci` is exactly the same as `main` at the push event commit.
         run: |
+          sleep 5m 30s
           git checkout -b push-ci
           git push -u origin push-ci --force
